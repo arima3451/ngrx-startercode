@@ -12,5 +12,5 @@ import { GroceryComponent } from './components/grocery/grocery.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
+  
 }
