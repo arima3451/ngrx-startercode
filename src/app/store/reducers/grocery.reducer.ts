@@ -22,7 +22,8 @@ createReducer(
     }),
     // we can also handle other actions like addGrocerySuccess and updateGrocerySuccess like this
     on(groceryActions.addGrocerySuccess, (state, action) => {
-        const lastId = state.length > 0 ? Math.max(...state.map(item => item.id)) : 0;
-        return [...state, { ...action.grocery, id: lastId + 1 }];
+        // const lastId = state.length > 0 ? Math.max(...state.map(item => item.id)) : 0;
+        // return [...state, { ...action.grocery, id: lastId + 1 }];
+        return [...state, action.grocery];
     })
 );

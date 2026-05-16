@@ -39,11 +39,16 @@ export class GroceryComponent {
     if(selectedType) this.filteredGroceries$ = this.store.select(selectGroceriesByType(selectedType));
     else this.filteredGroceries$ = undefined;
   }
+  
   addGroceries(){
+    let lastId = 0;
+    this.groceries$?.subscribe(groceries => {
+      lastId = Math.max(...groceries.map(item => item.id), 0);
+    });
     const newGrocery: Grocery = {
-      id: 1,
-      name:'Tomato',
-      type:'vegetable'
+      id: lastId + 1,
+      name:'Cake',
+      type:'Bakery'
     }
 
     this.store.dispatch(groceryActions.addGrocery({ grocery: newGrocery }));
