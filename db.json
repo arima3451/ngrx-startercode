@@ -1,8 +1,29 @@
 {
-    "groceries": [
-    { "id": 1, "name": "Milk", "type": "fruit" },
-    { "id": 2, "name": "Banana", "type": "fruit" },
-    { "id": 3, "name": "lays chips", "type": "snacks" },
-    { "id": 4, "name": "doritos", "type": "snacks" }
-    ]
-  }
+  "groceries": [
+    {
+      "id": 1,
+      "name": "Milk",
+      "type": "Dairy"
+    },
+    {
+      "id": 2,
+      "name": "Bread",
+      "type": "Bakery"
+    },
+    {
+      "id": 3,
+      "name": "Banana",
+      "type": "Fruit"
+    },
+    {
+      "id": 4,
+      "name": "Apples",
+      "type": "Fruit"
+    },
+    {
+      "id": 1,
+      "name": "Tomato",
+      "type": "vegetable"
+    }
+  ]
+}

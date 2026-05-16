@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { addToBucket, removeFromBucket } from '../../store/action/bucket.action';
 import { selectGroceries, selectGroceriesByType } from '../../store/selectors/grocery.selectors';
+import { groceryActions } from '../../store/action/grocery.action';
 
 
 
@@ -37,6 +38,15 @@ export class GroceryComponent {
     
     if(selectedType) this.filteredGroceries$ = this.store.select(selectGroceriesByType(selectedType));
     else this.filteredGroceries$ = undefined;
+  }
+  addGroceries(){
+    const newGrocery: Grocery = {
+      id: 1,
+      name:'Tomato',
+      type:'vegetable'
+    }
+
+    this.store.dispatch(groceryActions.addGrocery({ grocery: newGrocery }));
   }
 
 

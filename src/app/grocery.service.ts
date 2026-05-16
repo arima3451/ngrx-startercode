@@ -11,4 +11,8 @@ export class GroceryService {
   fetchAllGroceries(){
     return this.http.get("http://localhost:5000/groceries")
   }
+
+  addGrocery(grocery: any){
+    return this.http.post("http://localhost:5000/groceries", grocery)
+  }
 }

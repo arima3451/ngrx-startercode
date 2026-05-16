@@ -7,6 +7,7 @@ import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools  } from '@ngrx/store-devtools';
 import { groceryReducer } from './store/reducers/grocery.reducer';
 import { bucketReducer } from './store/reducers/bucket.reducer';
+import { GroceryEffects } from './store/effects/grocery.effects';
 
 
 export const appConfig: ApplicationConfig = {
@@ -21,7 +22,7 @@ export const appConfig: ApplicationConfig = {
     }),
     //its used to add effects to the store and it takes an array of effects classes
     provideEffects([
-      // GroceryEffects
+      GroceryEffects
     ]),
     //its used to add the store devtools to the application and it takes an object with the configuration options
     provideStoreDevtools({
