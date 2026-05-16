@@ -5,8 +5,8 @@ import { Grocery } from "../../../models/grocery.model";
 const initialState: Grocery[] = [
     { id: 1, name: 'Milk', type: 'Dairy' },
     { id: 2, name: 'Bread', type: 'Bakery' },
-    { id: 3, name: 'Eggs', type: 'Dairy' },
-    { id: 4, name: 'Apples', type: 'Produce' },
+    { id: 3, name: 'Banana', type: 'Fruit' },
+    { id: 4, name: 'Apples', type: 'Fruit' },
 ];
 
 //its used to create a reducer function and it takes the initial state and an object 
